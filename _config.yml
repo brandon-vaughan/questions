@@ -1,2 +1,12 @@
 # Name of the site
-name: Jekyll Builerplate
+name: Questions worth asking
+
+# Markdown # # # # # # # # # # # # # # # # # # # #
+markdown: kramdown
+
+baseurl: "/questions" # the subpath of your site, e.g. /blog/
+
+sass:
+    sass_dir: assets/styles/
+    sourcemap: :auto
+    style: :nested

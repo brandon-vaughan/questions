@@ -1,14 +1,20 @@
 ---
 layout: default
-title: Jekyll Boilerplate
+title: Home
 ---
 
 
-<h1>{{ page.title }}</h1>
-
-{% for post in site.posts %}
-
-    {{ post.date | date: "%B %e, %Y" }}
-    <a href="{{ post.url }}">{{ post.title }}</a>
-
+{% for post in site.categories['question'] reversed %}
+<div class="question--header">
+  <div class="lead">
+    <div class="lead__image {{post.class}}"></div>
+    <span class="lead__text">{{post.question_lead}}</span>
+  </div>
+</div>
+<div class="question {% if forloop.index == 1 %}on-display{% endif %}">
+  <div class="example_lead">{{post.example_lead}}</div>
+  <div class="answer">{{post.answer}}</div>
+  <div class="example_larger">{{post.example_larger}}</div>
+  <div class="question_larger">{{post.question_larger}}</div>
+</div>
 {% endfor %}
